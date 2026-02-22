@@ -7,7 +7,7 @@ const STORIES = [
     name: "Tariro",
     role: "Aspiring Doctor, Age 14",
     location: "Mutare District",
-    image: "https://loremflickr.com/600/400/african,boy,teenager",
+    image: "https://loremflickr.com/600/400/african,boy,student",
     story: "Before the Kwakuka Foundation for Hope, I used to walk 10km just to fetch water, often missing school. With the new borehole in our village and the scholarship I received, I can now focus entirely on my studies. My dream of becoming a doctor to help my community is finally within reach.",
     impact: "Scholarship Recipient"
   },
@@ -16,7 +16,7 @@ const STORIES = [
     name: "Gogo MaDube",
     role: "Grandmother & Farmer",
     location: "Rural Masvingo",
-    image: "https://loremflickr.com/600/400/african,woman,traditional,clothing",
+    image: "https://loremflickr.com/600/400/african,old,woman",
     story: "Raising five grandchildren alone was a struggle. The foundation didn't just give us food; they taught me sustainable farming methods. Now, my garden is green year-round. We eat healthy meals every day, and I sell the surplus vegetables at the market to buy uniforms.",
     impact: "Sustainable Agriculture Program"
   },
@@ -25,7 +25,7 @@ const STORIES = [
     name: "Mr. Moyo",
     role: "Community Headman",
     location: "Matabeleland North",
-    image: "https://loremflickr.com/600/400/african,man,suit",
+    image: "https://loremflickr.com/600/400/african,old,man",
     story: "Health was our biggest worry. The mobile clinic that visits us now has saved countless lives, including my youngest daughter when she fell ill with malaria. Seeing our children grow up healthy and strong is the greatest gift of hope we could ask for.",
     impact: "Healthcare Access"
   }

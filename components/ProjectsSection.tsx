@@ -78,11 +78,33 @@ const ProjectsSection: React.FC = () => {
                         <span className="text-secondary">${project.raised.toLocaleString()} Raised</span>
                         <span className="text-gray-400">Goal: ${project.target.toLocaleString()}</span>
                     </div>
-                    <div className="w-full bg-gray-100 rounded-full h-2.5 mb-6">
+                    
+                    <div className="w-full bg-gray-100 rounded-full h-4 mb-6 relative group/progress cursor-help">
+                        {/* Progress Bar */}
                         <div 
-                            className="bg-gradient-to-r from-primary to-amber-400 h-2.5 rounded-full" 
+                            className="bg-gradient-to-r from-primary to-amber-400 h-4 rounded-full transition-all duration-1000 ease-out relative overflow-hidden" 
                             style={{ width: `${Math.min((project.raised / project.target) * 100, 100)}%` }}
-                        ></div>
+                        >
+                            <div className="absolute inset-0 bg-white/20 w-full h-full animate-pulse hidden group-hover/progress:block"></div>
+                        </div>
+
+                        {/* Tooltip */}
+                        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover/progress:block z-20 w-max pointer-events-none animate-fade-in-up">
+                            <div className="bg-slate-800 text-white text-xs rounded-lg py-2 px-3 shadow-xl text-center border border-slate-700">
+                                <p className="font-bold text-amber-400 text-sm mb-0.5">
+                                    {((project.raised / project.target) * 100).toFixed(1)}% Funded
+                                </p>
+                                <div className="text-slate-300 text-[10px] space-y-0.5">
+                                    <p>Raised: <span className="text-white">${project.raised.toLocaleString()}</span></p>
+                                    <p>Target: <span className="text-white">${project.target.toLocaleString()}</span></p>
+                                    <p className="text-emerald-400 pt-1 border-t border-slate-700 mt-1">
+                                        ${(project.target - project.raised).toLocaleString()} to go
+                                    </p>
+                                </div>
+                                {/* Arrow */}
+                                <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-slate-800"></div>
+                            </div>
+                        </div>
                     </div>
                     
                     <button className="w-full py-3 border-2 border-secondary text-secondary font-bold rounded-lg hover:bg-secondary hover:text-white transition-colors flex items-center justify-center gap-2">

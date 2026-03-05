@@ -7,7 +7,6 @@ import ProjectsSection from './components/ProjectsSection';
 import GetInvolvedSection from './components/GetInvolvedSection';
 import SuccessStoriesSection from './components/SuccessStoriesSection';
 import Footer from './components/Footer';
-import ChatAssistant from './components/ChatAssistant';
 import DonateModal from './components/DonateModal';
 import ConstitutionPage from './components/ConstitutionPage';
 
@@ -54,7 +53,6 @@ const App: React.FC = () => {
       <Footer />
       
       {/* Floating Elements */}
-      <ChatAssistant />
       <DonateModal isOpen={isDonateOpen} onClose={() => setIsDonateOpen(false)} />
     </div>
   );
